@@ -1,0 +1,9 @@
+google-cloud-speech==2.22.0
+google-cloud-texttospeech==2.14.2
+grpcio-status==1.59.2
+openai==1.2.3
+pvcobra==2.0.0
+pvporcupine==3.0.0
+pvrecorder==1.2.1
+pyaudio==0.2.14
+python-decouple==3.8
