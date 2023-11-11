@@ -15,8 +15,6 @@ python -m venv py-env # create a virtual environment
 python -m pip install -r requirements.txt
 ```
 
----
-
 ## implementation ⚡
 - picovoice pvporcupine wakeword recognition  
 - picovoice pvcobra voice activity detection  
