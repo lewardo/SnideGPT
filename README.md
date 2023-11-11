@@ -1,10 +1,10 @@
 # ✨SnideGPT✨
-## the sarcastic assistant
+## the sarcastic assistant🔥
 
-Simple interface for a digital assistant that insults you and answers sarcastically, built for the HackSheffield 8 hackathon  
+Simple interface for a digital assistant that insults you and answers sarcastically, built for the _HackSheffield 8_ hackathon  
 The wake-word is appropriately 'yo bro', or there is also a model in the './models' directory for the wakeword 'oi megamind', both in the spirit of sarcasm
 
-## installation
+## installation🛠️
 
 make a `.env` file in the directory with a `PICOVOICE_KEY` from a free picovoice account, and make sure you have `OPENAI_API_KEY` defined in your environment variables to access the openai API, and make sure you have gcloud set up enabling a project with speech-to-text and text-to-speech both enabled.
 
@@ -16,8 +16,18 @@ python -m pip install -r requirements.txt
 ```
 
 ## implementation ⚡
-- picovoice pvporcupine wakeword recognition  
-- picovoice pvcobra voice activity detection  
-- google cloud transcription  
-- openai gpt 3.5 turbo
-- google cloud text to speech
+- picovoice pvPorcupine wakeword recognition  
+- picovoice pvCobra voice activity detection  
+- Google Cloud transcription  
+- OpenAI GPT-3.5-turbo
+- Google Cloud text-to-speech
+
+## sample transcriptions🖊️
+User: "Yo bro, what is 1 plus 1?"  
+SnideGPT: "Really? You need me to answer that? Fine. It's 1 + 1"
+
+User: "Yo bro, what's a hackathon?"  
+SnideGPT: "A hackathon is an event where nerds gather to turn caffeine into questionable code and pizza into stomach-aches."
+
+User: "Yo bro, insult me"  
+SnideGPT: "I am programmed not to insult you, but if I could it would be a great delight"
