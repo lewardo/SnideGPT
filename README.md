@@ -1,11 +1,7 @@
 # ✨SnideGPT✨
 ## the sarcastic assistant
 
----
-
 Simple interface for a digital assistant that insults you and answers sarcastically, built for the HackSheffield 8 hackathon
-
----
 
 ## installation
 
