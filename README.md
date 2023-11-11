@@ -1,7 +1,7 @@
 # ✨SnideGPT✨
 ## the sarcastic assistant
 
-Simple interface for a digital assistant that insults you and answers sarcastically, built for the HackSheffield 8 hackathon
+Simple interface for a digital assistant that insults you and answers sarcastically, built for the HackSheffield 8 hackathon  
 The wake-word is appropriately 'yo bro', or there is also a model in the './models' directory for the wakeword 'oi megamind', both in the spirit of sarcasm
 
 ## installation
