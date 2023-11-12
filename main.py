@@ -9,10 +9,15 @@ if __name__ == "__main__":
         while True:
             pv.record_command(rec_path)
 
-            print("processing...")
+            print("transcribing...")
 
             transcription = stt.transcribe_file(rec_path)
+
+            print("processing...")
+
             completion = gpt.get_completion(transcription)
+
+            print("replying...")
 
             tts.generate_speech(completion, spk_path)
             tts.speak_file(spk_path)
