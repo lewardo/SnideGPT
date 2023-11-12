@@ -38,9 +38,20 @@ def record_command(path):
 
 		command.extend(frame)
 
-	while voice_probability > 0.2:
+	patience = 20
+	streak = False
+
+	while patience:
 		frame = recorder.read()
 		voice_probability = cobra.process(frame)
+
+		if voice_probability < 0.1:
+			if streak:
+				patience -= 1
+			else:
+				streak = True
+		else:
+			streak = False
 
 		command.extend(frame)
 	
