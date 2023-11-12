@@ -1,4 +1,4 @@
-# ✨TwatGPT✨
+# ✨SnideGPT✨
 ## the sarcastic "assistant"🔥
 
 Simple interface for a digital assistant that insults you and answers sarcastically, built for the _HackSheffield 8_ hackathon, aimed at the funniest hack, most ducktaped hack, best use of google cloud and best domain name registration.
