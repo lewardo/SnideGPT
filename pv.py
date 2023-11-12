@@ -9,7 +9,7 @@ recorder = pvrecorder(frame_length=512, device_index=0)
 cobra = pvcobra.create(access_key=config('PICOVOICE_API_KEY'))
 porcupine = pvporcupine.create(
 	access_key=config('PICOVOICE_API_KEY'),
-	keyword_paths=['./models/yobro.ppn']
+	keyword_paths=['./models/ymg.ppn']
 )
 
 def deinit():
