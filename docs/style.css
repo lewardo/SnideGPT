@@ -1,0 +1,182 @@
+@font-face {
+    font-family: pixel;
+    src: url('./assets/font.ttf');
+}
+
+@keyframes intro-anim {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes idle-anim {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes quotes {
+    0% {
+        opacity: 0;
+    }
+    5%, 10% {
+        opacity: 1;
+    }
+    15%, 100% {
+        opacity: 0;
+    }
+}
+
+
+:root {
+    font-size: 62.5%;
+
+    font-weight: normal;
+    font-family: 'pixel', sans-serif;
+  
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+:root::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.1);
+    animation: intro-anim 1s forwards ease-out, idle-anim 3s 1s infinite ease-in-out;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8rem;
+    font-family: 'pixel';
+    padding: 4.8rem;
+    counter-reset: quotes;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    color: white;
+}
+
+h1 span {
+    font-family: sans-serif;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.popup {
+    position: absolute;
+    max-width: 48rem;
+    color: white;
+    margin: 4rem;
+    font-size: 1.6rem;
+    text-align: center;
+    opacity: 0;
+    counter-increment: quotes;
+    animation: quotes 48s infinite linear;
+}
+
+.popup:nth-of-type(1) { animation-delay: 0s; }
+.popup:nth-of-type(2) { animation-delay: 8s; }
+.popup:nth-of-type(3) { animation-delay: 16s; }
+.popup:nth-of-type(4) { animation-delay: 24s; }
+.popup:nth-of-type(5) { animation-delay: 32s; }
+.popup:nth-of-type(6) { animation-delay: 40s; }
+
+.popup-top-left {
+    right: 8rem;
+    top: 25%;
+}
+
+.popup-top-right {
+    left: 8rem;
+    top: 25%;
+}
+
+.popup-mid-left {
+    right: 8rem;
+    top: 50%;
+}
+
+.popup-mid-right {
+    left: 8rem;
+    top: 50%;
+}
+
+.popup-bot-left {
+    right: 8rem;
+    top: 75%;
+}
+
+.popup-bot-right {
+    left: 8rem;
+    top: 75%;
+}
+
+.github {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 1.6rem;
+    margin: 2rem;
+}
