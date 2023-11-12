@@ -6,9 +6,9 @@ import pvporcupine, pvcobra
 
 recorder = pvrecorder(frame_length=512, device_index=0)
 
-cobra = pvcobra.create(access_key=config('PICOVOICE_KEY'))
+cobra = pvcobra.create(access_key=config('PICOVOICE_API_KEY'))
 porcupine = pvporcupine.create(
-	access_key=config('PICOVOICE_KEY'),
+	access_key=config('PICOVOICE_API_KEY'),
 	keyword_paths=['./models/yobro.ppn']
 )
 
@@ -22,14 +22,14 @@ def record_command(path):
 	command = []
 	frame = recorder.read()
 
-	print('listening...')
+	print('waiting...')
 
 	keyword_index = porcupine.process(frame)
 	while keyword_index < 0:
 		frame = recorder.read()
 		keyword_index = porcupine.process(frame)
     
-	print('recording...')
+	print('listening...')
 
 	voice_probability = cobra.process(frame)
 	while voice_probability < 0.8:

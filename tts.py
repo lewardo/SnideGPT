@@ -1,4 +1,5 @@
 import wave
+from decouple import config
 from pyaudio import PyAudio as pyaudio
 
 import google.cloud.texttospeech as tts
@@ -34,7 +35,10 @@ def generate_speech(text, path):
 	
 	audio_config = tts.AudioConfig(audio_encoding=tts.AudioEncoding.LINEAR16)
 
-	client = tts.TextToSpeechClient()
+	client = tts.TextToSpeechClient(
+		client_options={"api_key": config('GOOGLE_API_KEY'), "quota_project_id": "snidegpt"}
+	)
+
 	response = client.synthesize_speech(
 		input=text_input,
 		voice=voice_params,

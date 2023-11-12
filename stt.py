@@ -1,6 +1,9 @@
+from decouple import config
 from google.cloud import speech
 
-client = speech.SpeechClient()
+client = speech.SpeechClient(
+	client_options={"api_key": config('GOOGLE_API_KEY'), "quota_project_id": "snidegpt"}
+)
 
 def transcribe_file(path):
 	config = speech.RecognitionConfig(encoding = speech.RecognitionConfig.AudioEncoding.LINEAR16, sample_rate_hertz = 16000, language_code = "en-GB")

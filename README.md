@@ -6,13 +6,13 @@ The wake-word is appropriately 'yo bro', or there is also a model in the './mode
 
 ## installation🛠️
 
-make a `.env` file in the directory with a `PICOVOICE_KEY` from a free picovoice account, and make sure you have `OPENAI_API_KEY` defined in your environment variables to access the openai API, and make sure you have gcloud set up enabling a project with speech-to-text and text-to-speech both enabled.
+make a `.env` file in the directory with a `PICOVOICE_API_KEY`, an `OPENAI_API_KEY`, and a `GOOGLE_API_KEY` linked to a gcloud project set up  with speech-to-text and text-to-speech both enabled.
 
 make a virtual environment and install the required libraries
 ```bash
 python -m venv py-env # create a virtual environment
 ./py-env/Scripts/activate # active the venv
-python -m pip install -r requirements.txt
+python -m pip install --user -r requirements.txt
 ```
 
 ## implementation ⚡
