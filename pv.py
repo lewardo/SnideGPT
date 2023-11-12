@@ -51,6 +51,7 @@ def record_command(path):
 			else:
 				streak = True
 		else:
+			patience = 20
 			streak = False
 
 		command.extend(frame)
