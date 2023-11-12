@@ -22,14 +22,14 @@ def record_command(path):
 	command = []
 	frame = recorder.read()
 
-	print('waiting...')
+	print("\rwaiting...", end="")
 
 	keyword_index = porcupine.process(frame)
 	while keyword_index < 0:
 		frame = recorder.read()
 		keyword_index = porcupine.process(frame)
     
-	print('listening...')
+	print("\rlistening...", end="")
 
 	voice_probability = cobra.process(frame)
 	while voice_probability < 0.8:

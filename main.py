@@ -9,20 +9,18 @@ if __name__ == "__main__":
         while True:
             pv.record_command(rec_path)
 
-            print("transcribing...")
+            print("\rtranscribing...", end="")
 
             transcription = stt.transcribe_file(rec_path)
 
-            print("processing...")
+            print("\rprocessing...", end="")
 
             completion = gpt.get_completion(transcription)
 
-            print("replying...")
+            print("\rreplying...", end="")
 
             tts.generate_speech(completion, spk_path)
             tts.speak_file(spk_path)
-
-            print('----------')
 
     except KeyboardInterrupt:
         pass
